@@ -1,0 +1,232 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 55px 120px;
+  color: #616161;
+  @extend %opensans-400;
+  z-index: 2;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__lang-link {
+    font-size: 18px;
+    line-height: 25px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: all .3s linear;
+    &:hover{
+      color: $default;
+    }
+    & + .header__lang-link{
+      margin-left: 10px;
+    }
+  }
+  &__lang-link--active {
+    color: $default;
+    border-bottom: 1px solid $accent;
+  }
+  
+  &__btn {
+    width: 35px;
+    height: 21px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    pointer-events: none;
+    position: relative;
+    &::before,
+    &::after{
+      content: '';
+      position: absolute;
+      background-color: $accent;
+      height: 1px;
+      right: 0;
+    }
+    &::before{
+      width: 23px;
+      top: 0;
+    }
+    &::after{
+      width: 29px;
+      bottom: 0;
+    }
+  }
+  &__btn-line {
+    width: 35px;
+    height: 1px;
+    background-color: $accent;
+    display: block;
+  }
+}
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__item + .menu__item{
+    margin-left: 25px;
+  }
+  &__item-link {
+    font-size: 21px;
+    line-height: 29px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: all .3s linear;
+    &:hover{
+      color: $default;
+    }
+  }
+  &__item-link--active {
+    color: $default;
+    border-bottom: 1px solid $accent;
+  }
+}
+
+.top{
+  background-color: #0F0F0F;
+ /*  background-image: url('../images/top-photo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 70% 100%; */
+    height: 100vh;
+  padding: 60px 0 55px;
+  &__wrapper{
+    z-index: 1;
+    background-image: url('../images/top-photo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 90% 100%;
+    height: 100vh;
+    position: relative;
+  }
+  &__subtitle{
+    position: absolute;
+    top: 255px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 150px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    color: #161616;
+    text-transform: uppercase;
+    @extend %oswald-700;
+    display: block;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 350px;
+  }
+  &__content{
+    max-width: 740px;
+    margin-top: 70px;
+    margin-bottom: 55px;
+  }
+  &__title{
+    font-size: 110px;
+    line-height: 163px;
+    color: $title;
+    @extend %oswald-400;
+    margin-bottom: 8px;
+  }
+  &__name{
+    font-size: 25px;
+    line-height: 34px;
+    color: #616161;
+    @extend %opensans-300;
+    margin-bottom: 50px;
+  }
+  &__link{
+    font-size: 26px;
+    line-height: 35px;
+    @extend %opensans-300;
+    padding: 14px 43px;
+    background-color: #272727;
+    border-radius: 30px;
+  }
+  &__theme{
+    padding: 4px;
+    background-color: #272727;
+    border-radius: 30px;
+    height: 35px;
+    width: 123px;
+    display: flex;
+    transform: rotate(90deg) translateY(-40px);
+    margin-top: 50px;
+  }
+  &__theme-btn{
+    font-size: 10px;
+    line-height: 14px;
+    @extend %opensans-300;
+    color: $default;
+    padding: 6px 12px 6px 23px;
+    transition: all .2s linear;
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+      &::before{
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      width: 9px;
+      height: 9px;
+      background-repeat: no-repeat;
+    }
+  }
+  &__theme-btn--active{
+    background-color: #1C1C1C;
+  }
+  &__theme-btn--light{
+    &::before{
+      background-image: url('../images/icons/sun.svg');
+    }
+  }
+  &__theme-btn--dark{
+    &::before{
+      background-image: url('../images/icons/moon.svg');
+      transform: rotate(-95deg);
+    }
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  &__item + .social__item{
+    margin-left: 14px;
+  }
+  &__link {
+    display: flex;
+    svg path{
+      transition: all .3s linear;
+    }
+    &:hover{
+      svg path{
+        fill: $accent;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+@import 'media';

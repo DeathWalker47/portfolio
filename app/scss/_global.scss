@@ -1,0 +1,49 @@
+html, body{
+  height: 100%;
+}
+
+body{
+  color: $default;
+  @extend %opensans-400;
+  font-size: 23px;
+  line-height: 31px;
+  position: relative;
+}
+
+
+.main{
+  flex-grow: 1;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title{
+  color: $title;
+  font-size: 65px;
+  line-height: 96px;
+  @extend %oswald-400;
+  padding-left: 85px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65px;
+    height: 1px;
+    background-color: $accent;
+  }
+}

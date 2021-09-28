@@ -32,7 +32,7 @@ body{
 .title{
   color: $title;
   font-size: 65px;
-  line-height: 96px;
+  line-height: 100%;
   @extend %oswald-400;
   padding-left: 85px;
   position: relative;

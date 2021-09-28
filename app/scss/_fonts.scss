@@ -37,3 +37,13 @@
         url('../fonts/OpenSans-Regular.woff') format('woff');
         font-display: swap;
       }
+
+@font-face{
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  src: local('DMSans-Regular'),
+        url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/OpenSans-SemiBold.woff') format('woff');
+        font-display: swap;
+      }

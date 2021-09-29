@@ -25,11 +25,7 @@
       font-size: 110px;
     }
     &__wrapper{
-      background-position: 113%;
-      background-size: 600px;
-    }
-    &__inner {
-     /*  padding-top: 190px; */
+      background-position: bottom center;
     }
     &__title {
       font-size: 80px;
@@ -43,14 +39,43 @@
       line-height: 30px;
       padding: 10px 25px;
     }
-    &__content {
-    }
   }
   .menu__item+.menu__item {
     margin-left: 20px;
   }
   .header__lang-link+.header__lang-link {
     margin-left: 5px;
+  }
+  .about-me{
+    &__inner{
+      flex-direction: column;
+    }
+    &__img-box {
+      margin: 0 auto 30px;
+    }
+    &__content {
+      max-width: 100%;
+    }
+  }
+  .skills{
+    &__circle{
+      justify-content: center;
+    }
+  }
+  .priorities{
+    &__inner{
+      justify-content: center;
+    }
+    &__img-box {
+      margin-bottom: 30px;
+    }
+    &__title {
+      padding-left: 110px;
+    }
+    &__item {
+      padding-left: 110px;
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -67,7 +92,7 @@
       top: 125px;
     }
     &__wrapper{
-      background-position: bottom center;
+      background-size: 600px;
     }
     &__inner {
       padding-top: 260px;
@@ -86,8 +111,6 @@
       font-size: 14px;
       line-height: 30px;
       padding: 8px 18px;
-    }
-    &__content {
     }
   }
   .menu{
@@ -118,6 +141,12 @@
     &__item-link{
       color: $title;
     }
+  }
+  .about-me {
+    padding: 80px 0 40px;
+  }
+  .priorities__title::before {
+    left: 25px;
   }
 }
 
@@ -160,6 +189,110 @@
     align-items: center;
     right: 15px;
   }
+  .about-me {
+    &__img-box {
+      width: 320px;
+      height: 320px;
+      margin-bottom: 25px;
+      &::before {
+        width: 300px;
+        height: 300px;
+        top: -19px;
+        right: -19px;
+        border: 19px solid #1C1C1C;
+      }
+    }
+    &__img {
+      width: auto;
+      height: auto;
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__text{
+      margin-bottom: 12px;
+    }
+    &__links-box {
+      margin-top: 20px;
+    }
+    &__links-text {
+      padding-left: 35px;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 15px;
+    }
+  }
+  .skills {
+    padding: 60px 0;
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+  .progressbar {
+    margin: 15px;
+    width: 140px;
+  }
+  .circle {
+    .name {
+      font-size: 20px;
+      width: 140px;
+    }
+    div {
+      position: absolute;
+      top: 54%;
+      width: 140px;
+      text-align: center;
+      text-align: center;
+      font-size: 22px;
+      line-height: 37px;
+      color: #f0f0f0;
+    }
+    .descr{
+      font-size: 16px;
+      line-height: 30px;
+      width: 140px;
+    }
+    canvas{
+      width: 140px!important;
+      height: 140px!important;
+    }
+  }
+  .priorities {
+    padding: 60px 0;
+    &__title{
+      padding-left: 70px;
+      margin-bottom: 20px;
+      &::before {
+        left: 0;
+      }
+    }
+    &__img-box {
+      margin-bottom: 15px;
+      width: 260px;
+      height: 480px;
+    }
+    &__item{
+      padding-left: 70px;
+      margin-bottom: 25px;
+      &::before{
+        width: 54px;
+        height: 54px;
+      }
+    }
+    &__item--speed::before{
+      background-image: url('../images/icons/speed-mobil.svg');
+    }
+    &__item--adaptive::before{
+      background-image: url('../images/icons/adaptive-mobil.svg');
+    }
+    &__item--browser::before{
+      background-image: url('../images/icons/browser-mobil.svg');
+    }
+    &__item-title {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
 }
 
 @media (max-width:360px){
@@ -183,7 +316,44 @@
       line-height: 24px;
     }
   }
+  .about-me {
+    padding: 60px 0 40px;
+    &__img-box {
+      width: 270px;
+      height:270px;
+      margin-bottom: 20px;
+      &::before {
+        width: 270px;
+        height: 270px;
+        top: -14px;
+        right: -14px;
+        border: 14px solid #1C1C1C;
+      }
+    }
+    &__title {
+      margin-bottom: 15px;
+    }
+  }
+  .skills {
+    padding: 40px 0;
+  }
 }
+
+@media (max-width:340px){
+  .priorities{
+    &__title{
+      padding-left: 55px;
+    }
+    &__item{
+      padding-left: 0;
+      padding-right: 6px;
+      &::before{
+        display: none;
+      }
+    }
+  }
+}
+
 
 @media (max-width: 900px) and (orientation: landscape){
   .menu__item {

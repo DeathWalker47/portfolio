@@ -2,12 +2,20 @@ $(function(){
  
     $(".menu__item-link").on("click", function (e) {
       e.preventDefault();
+      $('.header__btn').removeClass('header__btn--active');
+    $('.menu__list').removeClass('menu__list--active');
       var id = $(this).attr('href'),
           top = $(id).offset().top;
       $('body,html').animate({
           scrollTop: top
       }, 1200);
   });
+
+    $('.header__btn').on('click', function(){
+    $('.header__btn').toggleClass('header__btn--active');
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+ 
 
 });
 

@@ -47,3 +47,12 @@ body{
     background-color: $accent;
   }
 }
+
+@media (max-width:860px){
+  .title{
+    padding-left: 55px;
+    &::before {
+      width: 40px;
+    }
+  }
+}

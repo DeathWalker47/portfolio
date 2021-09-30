@@ -26,10 +26,10 @@
                 <a class="menu__item-link" href="#about">Обо мне</a>
               </li>
               <li class="menu__item">
-                <a class="menu__item-link" href="#">Портфолио</a>
+                <a class="menu__item-link" href="#portfolio">Портфолио</a>
               </li>
               <li class="menu__item">
-                <a class="menu__item-link" href="#">Контакты</a>
+                <a class="menu__item-link" href="#contact">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -192,6 +192,133 @@
             </div>
           </article> 
       </section> 
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <h2 class="title portfolio__title">
+            Мое портфолио
+          </h2>
+          <div class="portfolio__filter">
+            <button class="portfolio__filter-btn" type="button" data-filter="all">Все</button>
+            <button class="portfolio__filter-btn" type="button" data-filter=".category-a">Лендинги</button>
+            <button class="portfolio__filter-btn" type="button" data-filter=".category-b">Интернет-магазины</button>
+            <button class="portfolio__filter-btn" type="button" data-filter=".category-c">Корпоративный сайт</button>
+          </div>
+          <div class="portfolio__works">
+            <div class="portfolio__work mix category-a category-b">
+              <a class="portfolio__img-link" href="#">
+                <picture>
+                  <source class="portfolio__img" srcset="images/one.webp" type="image/webp">
+                  <img class="portfolio__img" src="images/one.jpg" alt="Harley Davidson">
+                </picture>
+              </a>
+              <a class="portfolio__work-box" href="#">
+                <p class="portfolio__work-name">Harley-Davidson</p>
+                <p class="portfolio__work-descr">Одностраничный магазин</p>
+              </a>
+            </div>
+
+            <div class="portfolio__work mix category-a">
+              <a class="portfolio__img-link" href="#">
+                <picture>
+                  <source class="portfolio__img" srcset="images/two.webp" type="image/webp">
+                  <img class="portfolio__img" src="images/two.jpg" alt="Пленочная фотография">
+                </picture>
+              </a>
+              <a class="portfolio__work-box" href="#">
+                <p class="portfolio__work-name">Пленочная фотография</p>
+                <p class="portfolio__work-descr">Сайт-визитка</p>
+              </a>
+            </div>
+
+            <div class="portfolio__work mix category-c">
+              <a class="portfolio__img-link" href="#">
+                <picture>
+                  <source class="portfolio__img" srcset="images/three.webp" type="image/webp">
+                  <img class="portfolio__img" src="images/three.jpg" alt="Crope">
+                </picture>
+              </a>
+              <a class="portfolio__work-box" href="#">
+                <p class="portfolio__work-name">Crope</p>
+                <p class="portfolio__work-descr">Сайт Веб-агенства</p>
+              </a>
+            </div>
+
+            <div class="portfolio__work mix category-a">
+              <a class="portfolio__img-link" href="#">
+                <picture>
+                  <source class="portfolio__img" srcset="images/fore.webp" type="image/webp">
+                  <img class="portfolio__img" src="images/fore.jpg" alt="Broms">
+                </picture>
+              </a>
+              <a class="portfolio__work-box" href="#">
+                <p class="portfolio__work-name">Broms</p>
+                <p class="portfolio__work-descr">Портфолио фотографа</p>
+              </a>
+            </div>
+
+            <div class="portfolio__work mix category-b">
+              <a class="portfolio__img-link" href="#">
+                <picture>
+                  <source class="portfolio__img" srcset="images/five.webp" type="image/webp">
+                  <img class="portfolio__img" src="images/five.jpg" alt="Lolly">
+                </picture>
+              </a>
+              <a class="portfolio__work-box" href="#">
+                <p class="portfolio__work-name">Lolly</p>
+                <p class="portfolio__work-descr">Интернет-магазин</p>
+              </a>
+            </div>
+
+            <div class="portfolio__work mix category-c">
+              <a class="portfolio__img-link" href="#">
+                <picture>
+                  <source class="portfolio__img" srcset="images/six.webp" type="image/webp">
+                  <img class="portfolio__img" src="images/six.jpg" alt="Barbercrope">
+                </picture>
+              </a>
+              <a class="portfolio__work-box" href="#">
+                <p class="portfolio__work-name">Barbercrope</p>
+                <p class="portfolio__work-descr">Сайт барбершопа</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2 class="title contact__title">
+
+          </h2>
+          <p class="contact__write-me">
+
+          </p>
+          <form class="contact-form" action="#">
+            <p class="contact-form__task">
+
+            </p>
+            <div class="contact-form__option">
+              <label class="contact-form__label">
+                <input class="contact-form__check" type="radio" name="Выбор">
+                <span class="contact-form__checkbox">Верстка по макету</span>
+              </label>
+              <label class="contact-form__label">
+                <input class="contact-form__check" type="radio" name="Выбор">
+                <span class="contact-form__checkbox">Дизайн + верстка</span>
+              </label>
+              <label class="contact-form__label">
+                <input class="contact-form__check" type="radio" name="Выбор">
+                <span class="contact-form__checkbox">Другое</span>
+              </label>
+            </div>
+            <div class="contact-form__input-box">
+              <input class="contact-form__input" type="text" placeholder="Ваше имя">
+              <input class="contact-form__input" type="email" placeholder="Ваш email">
+            </div>
+            <textarea class="contact-form__textarea" name="Сообщение" placeholder="Сообщение"></textarea>
+            <button class="contact-form__btn" type="submit">Отправить</buttonc>
+          </form>
+        </div>
+      </section>
     </main>
   </div>
   <script src="js/main.min.js"></script>

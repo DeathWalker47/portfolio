@@ -11,7 +11,7 @@
   left: 0;
   right: 0;
   padding: 55px 0;
-  color: #616161;
+  color: $gray;
   @extend %opensans-400;
   z-index: 2;
   &__inner {
@@ -164,7 +164,7 @@
   &__name{
     font-size: 25px;
     line-height: 34px;
-    color: #616161;
+    color: $gray;
     @extend %opensans-300;
     margin-bottom: 50px;
   }
@@ -248,8 +248,20 @@
 
 .about-me {
   padding: 130px 0 80px;
-  background-color: #232323;
-  /* background-color: #1D1D1D; */
+  /* background-color: #232323; */
+  background-color: #1D1D1D;
+  position: relative;
+/*   z-index: 1;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../images/about-bg.jpg') no-repeat center/cover;
+    opacity: .7;
+  } */
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -259,6 +271,7 @@
     width: 434px;
     height: 434px;
     z-index: 1;
+    background-color: #7f7f7f;
     position: relative;
     &::before{
       content: '';
@@ -410,6 +423,20 @@
 .priorities {
   background-color: #1D1D1D;
   padding: 100px 0;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../images/priorities-bg.jpg') no-repeat center/cover;
+    @supports (background-image: url('../images/priorities-bg.webp')) {
+      background: url('../images/priorities-bg.webp') no-repeat center/cover;
+    };
+    opacity: .7;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -419,6 +446,7 @@
   &__img-box {
     width: 409px;
     height: 724px;
+    z-index: 1;
   }
   &__img {
     width: auto;
@@ -470,6 +498,165 @@
   }
 }
 
+.portfolio{
+  background-color: #1D1D1D;
+  padding: 40px 0 95px;
+  &__title{
+    margin-bottom: 50px;
+    max-width: 461px;
+    width: 100%;
+    margin: 0 auto 50px;
+  }
+  &__filter{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 55px;
+  }
+  &__filter-btn + .portfolio__filter-btn{
+    margin-left: 35px;
+  }
+  &__filter-btn{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    padding-bottom: 5px;
+    color: $gray;
+    font-size: 24px;
+    line-height: 33px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+  }
+  &__works{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, 270px);
+    grid-gap: 44px;
+    margin-bottom: 90px;
+  }
+  &__work{
+    width: 360px;
+    /* overflow: hidden; */
+    border-radius: 30px;
+    position: relative;
+    &:hover{
+      .portfolio__img-link{  
+        &::before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 30px;
+          background-color: rgba($color: #0F0F0F, $alpha: .7);
+          transition: background-color .4s linear ;
+        }
+        &::after{
+          content: '';
+          position: absolute;
+          width: 70px;
+          height: 42px;
+          background-image: url('../images/icons/eye.svg');
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 115px;
+          opacity: 1;
+          visibility: visible;
+          transition: opacity .4s linear, visibility .4s linear, bottom .4s linear;
+        }
+      }
+      .portfolio__work-box{
+        bottom: 35px;
+        transition: all .3s linear .3s;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &:nth-child(1){
+      background-color: #101010;
+    }
+    &:nth-child(2){
+      background-color: #151515;
+    }
+    &:nth-child(3){
+      background-color: #0D0F0E;
+    }
+    &:nth-child(4){
+      background-color: #121A25;
+    }
+    &:nth-child(5){
+      background-color: #C8DAEE;
+    }
+    &:nth-child(6){
+      background-color: #202020;
+    }
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+  }
+  &__img-link{
+    width: 360px;
+    height: 270px;
+    display: block;
+    border-radius: 30px;
+    transform: scale(1.01);
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      background-color: rgba($color: #272727, $alpha: 0);
+      transition: background-color .4s linear .3s;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 42px;
+      background-image: url('../images/icons/eye.svg');
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      bottom: 50px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .4s linear .3s, bottom .4s linear .3s, visibility .4s linear .3s;
+    }
+  }
+  &__img{
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  &__work-box{
+    position: absolute;
+    bottom: -15px;
+    left: 10px;
+    right: 10px;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    transition: all .4s linear .1s;
+  }
+  &__work-name{
+    color: $title;
+    @extend %opensans-600;
+  }
+  &__work-descr{
+    font-size: 20px;
+    line-height: 27px;
+    @extend %opensans-300;
+  }
+}
 
+.mixitup-control-active{
+  border-bottom: 1px solid $accent;
+  color: $title;
+}
 
 @import 'media';

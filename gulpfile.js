@@ -34,6 +34,7 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/jquery-circle-progress/dist/circle-progress.js',
+    'node_modules/mixitup/dist/mixitup.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))

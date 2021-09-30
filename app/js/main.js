@@ -46,8 +46,14 @@ $(document).ready(function ($) {
           }
       });
   }
-
-  // Show animated elements
   animateElements();
   $(window).scroll(animateElements);
 });
+
+
+var mixer = mixitup('.portfolio__works', {
+    animation: {
+      duration: 900,
+      easing: 'ease-in-out'
+    }
+   });

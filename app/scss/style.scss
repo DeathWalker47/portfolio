@@ -169,13 +169,7 @@
     margin-bottom: 50px;
   }
   &__link{
-    font-size: 26px;
-    line-height: 35px;
-    @extend %opensans-300;
-    padding: 14px 43px;
-    background-color: #272727;
-    border-radius: 30px;
-    transition: all .3s linear;
+    @extend %btn;
   }
   &__theme{
     padding: 4px;
@@ -249,7 +243,7 @@
 .about-me {
   padding: 130px 0 80px;
   /* background-color: #232323; */
-  background-color: #1D1D1D;
+  background-color: #1B1B1B;
   position: relative;
 /*   z-index: 1;
   &::before{
@@ -421,7 +415,7 @@
  */
 
 .priorities {
-  background-color: #1D1D1D;
+  background-color: $main-bg;
   padding: 100px 0;
   position: relative;
   &::before{
@@ -499,8 +493,8 @@
 }
 
 .portfolio{
-  background-color: #1D1D1D;
-  padding: 40px 0 95px;
+  background-color: $main-bg;
+  padding: 40px 0 80px;
   &__title{
     margin-bottom: 50px;
     max-width: 461px;
@@ -531,7 +525,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, 270px);
     grid-gap: 44px;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
   }
   &__work{
     width: 360px;
@@ -658,5 +652,206 @@
   border-bottom: 1px solid $accent;
   color: $title;
 }
+
+
+.contact {
+  background-color: $main-bg;
+  padding: 60px 0 80px;
+  z-index: 1;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   /*  background: url('../images/contact-bg.jpg') no-repeat center/cover;
+    @supports (background-image: url('../images/contact-bg.webp')) {
+      background: url('../images/contact-bg.webp') no-repeat center/cover;
+    }; */
+    background: url('../images/priorities-bg.jpg') no-repeat center/cover;
+    @supports (background-image: url('../images/priorities-bg.webp')) {
+      background: url('../images/priorities-bg.webp') no-repeat center/cover;
+    };
+    opacity: .4;
+    z-index: -1;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__write-me {
+    font-size: 45px;
+    line-height: 61px;
+    margin-bottom: 45px; 
+    color: $title;
+  }
+  
+  &__blockquote{
+    padding: 40px;
+    font-size: 23px;
+    line-height: 36px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 29px #1D1D1D;
+    background-color: #323232;
+    max-width: 617px;
+    margin-left: auto;
+    margin-top: -145px;
+    margin-right: -60px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 0;
+	    height: 0;
+      bottom: -35px;
+      right: 25px;
+      border-top: 37px solid rgb(50, 50, 50);
+      border-left: 44px solid transparent;
+    }
+  }
+  &__qute-img{
+    width: 77px;
+    height: 77px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+  &__img{
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+.contact-form {
+  max-width: 1100px;
+  padding: 30px 52px 50px;   
+  margin: 0 auto;
+  &__task {
+    font-size: 30px;
+    line-height: 41px;
+    margin-bottom: 35px;
+    @extend %opensans-300;
+  }
+  &__option {
+    display: flex;
+    margin-bottom: 55px;
+  }
+  &__label {
+    display: inline-block;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  &__check {
+    @extend %checkbox-hidden;
+    &:checked + .contact-form__checkbox{
+      background-color: #272727;
+      color: $title;
+    }
+  }
+  &__checkbox {
+    padding: 16px 44px;
+    border: 1px solid $accent;
+    font-size: 25px;
+    line-height: 34px;
+    border-radius: 30px;
+  }
+  &__input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__input,
+  &__textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $accent;
+    background-color: transparent;
+    padding: 0 20px 15px 0;
+    color: $default;
+    &::placeholder{
+      color: inherit;
+    }
+  }
+  &__input {
+    max-width: 460px;
+    margin-bottom: 45px;
+  }
+  &__textarea {
+    display: block;
+    height: 100px;
+    margin-bottom: 55px;
+    resize: none
+  }
+  &__btn {
+    @extend %btn;
+  }
+ 
+}
+
+.footer{
+  background-color: #1B1B1B;
+  padding: 50px 0 20px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  &__item{
+    padding-left: 60px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 45px;
+      height: 45px;
+    }
+  }
+  .about-me__links-text{
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 0;
+    @extend %opensans-300;
+  }
+  .social{
+    justify-content: flex-start;
+  }
+  &__item--email::before{
+    background-image: url('../images/icons/footer-mess.svg');
+  }
+  &__item--tel::before{
+    background-image: url('../images/icons/footer-tel.svg');
+  }
+  &__item--social::before{
+    background-image: url('../images/icons/footer-soc.svg');
+  }
+  &__item-title{
+    font-size: 18px;
+    line-height: 25px;
+    color: $title;
+    margin-bottom: 5px;
+  }
+  &__bottom{
+    display: flex;
+    justify-content: center;
+  }
+  &__copy{
+    font-size: 14px;
+    line-height: 19px;
+    padding-left: 30px;
+    margin-right: 25px;
+  }
+  &__up{
+    width: 20px;
+  }
+}
+
 
 @import 'media';

@@ -3,7 +3,9 @@ $default:#bfbfbf;
 $title:#f0f0f0;
 $accent:#FE206F;
 $bg:#0F0F0F;
+$main-bg:#1B1B1B;
 $gray: #616161;
+$btn:#272727;
 
 %oswald-400{
   font-family: 'Oswald', sans-serif;
@@ -33,4 +35,30 @@ $gray: #616161;
   font-family: 'OpenSans', sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+%checkbox-hidden{
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+%btn{
+  font-size: 28px;
+  line-height: 35px;
+  @extend %opensans-300;
+  padding: 14px 44px;
+  background-color: $btn;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: $default;
+  transition: all .3s linear;
+  &:hover{
+    border: 1px solid $accent;
+    color: $title;
+  }
 }

@@ -1,6 +1,6 @@
 $(function(){
  
-    $(".menu__item-link").on("click", function (e) {
+    $(".menu__item-link, .top__link, .footer__up").on("click", function (e) {
       e.preventDefault();
       $('.header__btn').removeClass('header__btn--active');
     $('.menu__list').removeClass('menu__list--active');

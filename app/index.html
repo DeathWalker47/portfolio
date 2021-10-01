@@ -285,41 +285,116 @@
         </div>
       </section>
       <section class="contact" id="contact">
-        <div class="container">
-          <h2 class="title contact__title">
-
-          </h2>
-          <p class="contact__write-me">
-
-          </p>
-          <form class="contact-form" action="#">
-            <p class="contact-form__task">
-
+        <div class="contact__wrapper">
+          <div class="container">
+            <h2 class="title contact__title">
+              Есть проект?
+            </h2>
+            <p class="contact__write-me">
+              Свяжитесь со мной!
             </p>
-            <div class="contact-form__option">
-              <label class="contact-form__label">
-                <input class="contact-form__check" type="radio" name="Выбор">
-                <span class="contact-form__checkbox">Верстка по макету</span>
-              </label>
-              <label class="contact-form__label">
-                <input class="contact-form__check" type="radio" name="Выбор">
-                <span class="contact-form__checkbox">Дизайн + верстка</span>
-              </label>
-              <label class="contact-form__label">
-                <input class="contact-form__check" type="radio" name="Выбор">
-                <span class="contact-form__checkbox">Другое</span>
-              </label>
-            </div>
-            <div class="contact-form__input-box">
-              <input class="contact-form__input" type="text" placeholder="Ваше имя">
-              <input class="contact-form__input" type="email" placeholder="Ваш email">
-            </div>
-            <textarea class="contact-form__textarea" name="Сообщение" placeholder="Сообщение"></textarea>
-            <button class="contact-form__btn" type="submit">Отправить</buttonc>
-          </form>
+            <form class="contact-form" action="#">
+               <!-- Hidden Required Fields -->
+               <input type="hidden" name="project_name" value="Portfolio">
+               <input type="hidden" name="admin_email" value="fizer_00@mail.ru">
+               <input type="hidden" name="form_subject" value="Contact form">
+               <!-- END Hidden Required Fields -->
+              <p class="contact-form__task">
+                Какая у вас задача?
+              </p>
+              <div class="contact-form__option">
+                <label class="contact-form__label">
+                  <input class="contact-form__check" type="radio" name="option">
+                  <span class="contact-form__checkbox">Верстка по макету</span>
+                </label>
+                <label class="contact-form__label">
+                  <input class="contact-form__check" type="radio" name="option">
+                  <span class="contact-form__checkbox">Дизайн + верстка</span>
+                </label>
+                <label class="contact-form__label">
+                  <input class="contact-form__check" type="radio" name="option">
+                  <span class="contact-form__checkbox">Другое</span>
+                </label>
+              </div>
+              <div class="contact-form__input-box">
+                <input class="contact-form__input" type="text" placeholder="Ваше имя*" required>
+                <input class="contact-form__input" type="email" placeholder="Ваш email*" required>
+              </div>
+              <textarea class="contact-form__textarea" name="Сообщение" placeholder="Сообщение*" required></textarea>
+              <button class="contact-form__btn" type="submit">Отправить</button>
+            </form>
+               <blockquote class="contact__blockquote">
+                «Меня не пугают трудности
+                в работе, наоборот, любые нестандартные решения побуждают столкнуться с чем-то новым и получить бесценный опыт»
+                <div class="contact__qute-img">
+                  <picture>
+                    <source class="contact__img" srcset="images/footer-me.webp" type="image/webp"> 
+                    <img class="contact__img" src="images/footer-me.jpg" alt="Моя фотография">
+                  </picture>
+                </div>
+               </blockquote>
+          </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__item footer__item--email">
+            <h4 class="footer__item-title">
+              Моя почта:
+            </h4>
+            <p class="about-me__links-text">
+              <a class="about-me__link" href="mailto:fizer_00@mail.ru">fizer_00@mail.ru</a>
+            </p>
+          </div>
+          <div class="footer__item footer__item--tel">
+            <h4 class="footer__item-title">
+              Мой телефон:
+            </h4>
+            <p class="about-me__links-text">
+              <a class="about-me__link" href="tel:+79083000463">8-908-300-04-63</a>
+            </p>
+          </div>
+          <div class="footer__item footer__item--social">
+            <h4 class="footer__item-title">
+              Мои соц-сети:
+            </h4>
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link" href="https://vk.com/id178195666" target="_blanc">
+                  <svg width="18" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.37 8.92c-.047-.08-.339-.713-1.74-2.014-1.469-1.363-1.272-1.142.497-3.498 1.076-1.435 1.507-2.311 1.372-2.686-.128-.357-.92-.263-.92-.263l-2.634.015s-.194-.026-.34.06c-.142.086-.232.283-.232.283s-.418 1.111-.974 2.055c-1.173 1.993-1.643 2.098-1.835 1.974-.446-.288-.334-1.159-.334-1.776 0-1.932.292-2.737-.571-2.945C9.372.056 9.162.01 8.429.002c-.94-.01-1.737.004-2.187.224-.3.147-.531.474-.39.493.174.023.569.106.778.39.27.368.26 1.194.26 1.194s.156 2.273-.362 2.555c-.356.194-.843-.201-1.89-2.01-.535-.925-.94-1.95-.94-1.95S3.62.708 3.48.606C3.31.482 3.075.443 3.075.443L.571.458S.195.469.057.632c-.122.146-.01.446-.01.446s1.961 4.587 4.18 6.9c2.037 2.119 4.349 1.98 4.349 1.98h1.047s.316-.035.477-.21c.15-.16.144-.46.144-.46s-.02-1.405.632-1.612c.643-.204 1.469 1.358 2.344 1.96.662.454 1.165.355 1.165.355l2.34-.033s1.226-.076.645-1.039z" fill="#616161"/></svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="https://www.instagram.com/sfizer981/" target="_blanc">
+                  <svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.901 0h-6.75A5.626 5.626 0 0 0 .526 5.625v6.75A5.626 5.626 0 0 0 6.151 18h6.75a5.626 5.626 0 0 0 5.625-5.625v-6.75A5.626 5.626 0 0 0 12.901 0zm3.938 12.375a3.942 3.942 0 0 1-3.938 3.938h-6.75a3.942 3.942 0 0 1-3.937-3.938v-6.75A3.942 3.942 0 0 1 6.15 1.687h6.75a3.942 3.942 0 0 1 3.938 3.938v6.75z" fill="#616161"/><path d="M9.526 4.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.313A2.816 2.816 0 0 1 6.714 9a2.816 2.816 0 0 1 2.812-2.812A2.816 2.816 0 0 1 12.34 9a2.816 2.816 0 0 1-2.813 2.813zM14.364 4.762a.6.6 0 1 0 0-1.199.6.6 0 0 0 0 1.2z" fill="#616161"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="https://github.com/DeathWalker47" target="_blanc">
+                  <svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.525 0C4.555 0 .526 4.045.526 9.036a9.035 9.035 0 0 0 6.156 8.574c.45.083.614-.196.614-.436 0-.215-.008-.783-.012-1.537-2.503.546-3.032-1.211-3.032-1.211-.408-1.044-.999-1.322-.999-1.322-.818-.56.06-.549.06-.549.904.064 1.379.931 1.379.931.803 1.38 2.107.983 2.62.75.081-.583.314-.981.572-1.207-1.998-.229-4.1-1.004-4.1-4.466 0-.986.351-1.793.927-2.425-.093-.228-.402-1.147.088-2.39 0 0 .756-.244 2.475.925.718-.2 1.487-.3 2.253-.303a8.607 8.607 0 0 1 2.254.304c1.717-1.169 2.472-.926 2.472-.926.49 1.245.183 2.163.09 2.391.578.632.925 1.439.925 2.426 0 3.47-2.104 4.234-4.108 4.458.322.279.61.83.61 1.673 0 1.208-.01 2.182-.01 2.478 0 .242.161.523.618.434a9.036 9.036 0 0 0 6.148-8.572c0-4.99-4.03-9.036-9.001-9.036z" fill="#616161"/></svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="https://tlgg.ru/@Dniwe6" target="_blanc">
+                  <svg width="19" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m7.589 9.886-.298 4.188c.426 0 .61-.183.832-.403l1.997-1.908 4.139 3.03c.759.423 1.293.2 1.498-.698l2.717-12.729C18.715.242 18.07-.196 17.33.08L1.362 6.193C.272 6.616.289 7.223 1.177 7.5l4.082 1.27 9.482-5.934c.446-.295.852-.132.518.164L7.59 9.886z" fill="#616161"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copy">
+            Все права защищены. 2021
+          </p>
+          <a class="footer__up" href="#top">
+            <img src="images/icons/arrow-up.svg" alt="arrow up">
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
   <script src="js/main.min.js"></script>
 </body>

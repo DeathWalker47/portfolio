@@ -4,8 +4,33 @@ html, body{
 
 
 html.light{
+  .header{
+    color: #313131;
+  }
+  .menu__item-link--active,
+  .header__lang-link--active{
+    color: #000;
+  }
+  .top{
+    background-color: #cbcbcb;
+    &__title{
+      color: $main-bg;
+    }
+    &__subtitle{
+      color: #a6a6a6;
+    }
+    &__wrapper{
+      background-image: url(../images/l-4.png);
+      background-position: 88% 100%;
+      background-size: 800px;
+    }
+  }
   .title{
-    color: red;
+    color: $btn;
+  }
+  %btn{
+    color: $main-bg;
+    background-color: #a6a6a6;
   }
 }
 
@@ -42,6 +67,7 @@ body{
   line-height: 100%;
   @extend %oswald-400;
   padding-left: 85px;
+  transition: all .3s linear;
   position: relative;
   &::before{
     content: '';
@@ -81,5 +107,38 @@ body{
   }
   .title {
     font-size: 40px;
+  }
+}
+
+
+.scroll-top {
+  background: rgba($color: $bg, $alpha: .8);
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $accent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: all 0.4s;
+  svg{
+    transform: rotate(-90deg);
+    width: 30px;
+    path{
+      fill: $accent;
+    }
+  }
+  &--active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
   }
 }

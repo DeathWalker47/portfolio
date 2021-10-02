@@ -180,6 +180,8 @@
     display: flex;
     transform: rotate(90deg) translateY(-40px);
     margin-top: 50px;
+
+    cursor: pointer;//ПОКА ЧТО
   }
   &__theme-btn{
     font-size: 10px;
@@ -798,7 +800,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   &__item{
     padding-left: 60px;
@@ -840,12 +842,10 @@
   }
   &__bottom{
     display: flex;
-    justify-content: center;
   }
   &__copy{
     font-size: 14px;
     line-height: 19px;
-    padding-left: 30px;
     margin-right: 25px;
   }
   &__up{

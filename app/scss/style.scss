@@ -120,7 +120,7 @@
     background-position: 70% 100%; */
     overflow: hidden;
     height: 100vh;
-  padding: 60px 0 55px;
+  /* padding: 60px 0 55px; */
   &__wrapper{
     z-index: 1;
     background-image: url('../images/top-photo.png');
@@ -498,7 +498,6 @@
   background-color: $main-bg;
   padding: 40px 0 80px;
   &__title{
-    margin-bottom: 50px;
     max-width: 461px;
     width: 100%;
     margin: 0 auto 50px;
@@ -530,7 +529,6 @@
     margin-bottom: 40px;
   }
   &__work{
-    width: 360px;
     /* overflow: hidden; */
     border-radius: 30px;
     position: relative;
@@ -658,7 +656,7 @@
 
 .contact {
   background-color: $main-bg;
-  padding: 60px 0 80px;
+  padding: 60px 0 190px;
   z-index: 1;
   position: relative;
   &::before{
@@ -697,10 +695,9 @@
     box-shadow: 1px 1px 29px #1D1D1D;
     background-color: #323232;
     max-width: 617px;
-    margin-left: auto;
-    margin-top: -145px;
-    margin-right: -60px;
-    position: relative;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
     &::before{
       content: '';
       position: absolute;
@@ -749,16 +746,17 @@
   &__check {
     @extend %checkbox-hidden;
     &:checked + .contact-form__checkbox{
-      background-color: #272727;
+      background-color: #323232;
       color: $title;
     }
   }
   &__checkbox {
     padding: 16px 44px;
+    display: inline-block;
     border: 1px solid $accent;
     font-size: 25px;
     line-height: 34px;
-    border-radius: 30px;
+    border-radius: 50px;
   }
   &__input-box {
     display: flex;
@@ -798,12 +796,13 @@
   padding: 50px 0 20px;
   &__inner{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
   }
   &__item{
     padding-left: 60px;
+    margin-bottom: 30px;
     position: relative;
     &::before{
       content: '';
@@ -822,8 +821,9 @@
     margin-bottom: 0;
     @extend %opensans-300;
   }
-  .social{
+  ul.social{
     justify-content: flex-start;
+    padding-bottom: 0;
   }
   &__item--email::before{
     background-image: url('../images/icons/footer-mess.svg');

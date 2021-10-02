@@ -1,12 +1,18 @@
 
 
+@media (max-width: 1600px){
+  html.light .top__wrapper {
+    background-position: 90% 100%;
+    background-size: contain;
+  }
+}
 @media (max-width: 1440px){
   .top{
     &__wrapper{
       background-position: 100%;
     }
     &__inner {
-      padding-top: 220px;
+      padding-top: 300px;
     }
     &__subtitle {
       top: 160px;
@@ -14,6 +20,14 @@
     &__content {
       margin-top: 0;
       margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-width: 1440px){
+  .top{
+    &__inner{
+      padding-top: 220px;
     }
   }
 }
@@ -75,6 +89,34 @@
     &__item {
       padding-left: 110px;
       margin-bottom: 40px;
+    }
+  }
+  .portfolio__works {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    grid-gap: 30px;
+  }
+}
+
+@media (max-width: 1100px){
+  .contact-form{
+    &__input {
+      max-width: 100%;
+    }
+    &__checkbox {
+      padding: 14px 30px;
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+  .contact{
+    padding-bottom: 80px;
+    &__blockquote{
+      position: relative;
+      right: 0;
+      bottom: 0;
+      margin-left: auto;
     }
   }
 }
@@ -148,10 +190,68 @@
   .priorities__title::before {
     left: 25px;
   }
+
+  .contact{
+    &__write-me {
+      margin-bottom: 30px;
+    }
+    &__qute-img {
+      width: 55px;
+      height: 55px;
+      bottom: 15px;
+      right: 20px;
+    }
+  }
+  .contact-form{
+    padding: 0;
+    margin-bottom: 40px;
+    &__option {
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+    &__label {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    &__input {
+      margin-bottom: 35px;
+    }
+    &__textarea {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media (max-width:768px){
+  .portfolio{
+    &__title {
+      margin: 0 auto 25px;
+    }
+    &__filter {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 auto 35px;
+      width: 270px;
+    }
+    &__works{
+      margin-bottom: 0;
+    }
+    &__filter-btn+.portfolio__filter-btn {
+      margin-left: 0;
+    }
+  }
+
+
 }
 
 @media (max-width:576px){
+  html.light .top__wrapper {
+    /* background-position: -20% 100%; */
+    background-position: left bottom;
+    background-size: 550px;
+  }
   .top{
+    padding: 60px 0 55px;
     &__subtitle {
       top: 100px;
     /* font-size: 45px; */
@@ -181,6 +281,9 @@
         transform: rotate(-115deg);
       }
     }
+  }
+  .about-me {
+    padding: 60px 0 40px;
   }
   .social{
     position: absolute;
@@ -293,9 +396,112 @@
       line-height: 25px;
     }
   }
+
+  .portfolio {
+    padding:60px 0;
+    &__title {
+      margin: 0 auto 20px;
+    }
+    &__filter{
+      margin: 0 0 25px;
+    }
+    &__filter-btn{
+      font-size: 20px;
+      line-height: 25px;
+      padding-bottom: 0px;
+      margin-bottom: 7px;
+    }
+    &__img-link {
+      width: 300px;
+      height: 226px;
+    }
+  }
+
+  .contact{
+    padding: 60px 0;
+    &__write-me {
+      font-size: 30px;
+      line-height: 34px;
+      margin-bottom: 30px;
+    }
+    &__blockquote {
+      padding: 20px;
+      font-size: 16px;
+      line-height: 26px;
+      &::before {
+        bottom: -23px;
+        border-top: 23px solid #323232;
+        border-left: 32px solid transparent;
+      }
+    }
+    &__qute-img{
+      display: none;
+    }
+  }
+  .contact-form{
+    margin-bottom: 30px;
+    &__task {
+      font-size: 23px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+    &__checkbox {
+      padding: 10px 18px;
+      font-size: 16px;
+      line-height: 20px;
+      width: 100%;
+      text-align: center;
+    }
+    &__textarea,
+    .contact-form__input {
+      margin-bottom: 25px;
+    }
+    &__btn {
+      font-size: 18px;
+      line-height: 22px;
+      padding: 10px 27px;
+    }
+  }
+  .scroll-top--active {
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    right: 25px;
+  }
+
+  .footer{
+    padding: 40px 0 20px;
+    &__inner{
+      grid-gap: 10px;
+    }
+    &.footer__item {
+      margin-bottom: 20px;
+    }
+    &__item-title {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__copy {
+      font-size: 12px;
+      line-height: 16px;
+      margin-right: 14px;
+    }
+    .about-me__link{
+      font-size: 14px;
+    }
+    .social{
+      position: static;
+      &__item+.social__item {
+        margin-left: 10px;
+      }
+    }
+  }
 }
 
 @media (max-width:360px){
+  html.light .top__wrapper {
+    background-size: auto;
+  }
   .top{
     &__subtitle {
       top: 90px;
@@ -317,7 +523,6 @@
     }
   }
   .about-me {
-    padding: 60px 0 40px;
     &__img-box {
       width: 270px;
       height:270px;
@@ -334,15 +539,24 @@
       margin-bottom: 15px;
     }
   }
-  .skills {
-    padding: 40px 0;
+  .priorities__title,
+  .skills__title,
+  .portfolio__title{
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width:340px){
+  .about-me,
+  .skills,
+  .priorities,
+  .portfolio,
+  .contact{
+    padding: 40px 0;
+  }
   .priorities{
     &__title{
-      padding-left: 55px;
+      padding-left: 45px;
     }
     &__item{
       padding-left: 0;
@@ -351,6 +565,38 @@
         display: none;
       }
     }
+  }
+  .portfolio{
+    &__work{
+      &:hover .portfolio__work-box {
+        bottom: 20px;
+      }
+      &:hover .portfolio__img-link::after{
+        bottom: 85px;
+      }
+    }
+    &__work-name {
+      font-size: 16px;
+    }
+    &__work-descr {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__img-link {
+      width: 280px;
+      height: 211px;
+    }
+  }
+  .scroll-top{
+    width: 40px;
+    height: 40px;
+    svg{
+      width: 23px;
+    }
+    &--active {
+      bottom: 20px;
+      right: 20px;
+  }
   }
 }
 

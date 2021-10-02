@@ -4,6 +4,7 @@ $(function(){
       e.preventDefault();
       $('.header__btn').removeClass('header__btn--active');
     $('.menu__list').removeClass('menu__list--active');
+    $('body').removeClass('hidden');
       var id = $(this).attr('href'),
           top = $(id).offset().top;
       $('body,html').animate({
@@ -14,6 +15,7 @@ $(function(){
     $('.header__btn').on('click', function(){
     $('.header__btn').toggleClass('header__btn--active');
     $('.menu__list').toggleClass('menu__list--active');
+    $('body').toggleClass('hidden');
     });
 
 

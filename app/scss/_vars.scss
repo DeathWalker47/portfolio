@@ -56,7 +56,7 @@ $btn:#272727;
   cursor: pointer;
   border: 1px solid transparent;
   color: $default;
-  transition: all .3s linear;
+  transition: border .3s linear;
   &:hover{
     border: 1px solid $accent;
     color: $title;

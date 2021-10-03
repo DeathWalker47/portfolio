@@ -4,12 +4,27 @@ html, body{
 
 
 html.light{
+  body{
+    color: $btn;
+  }
+  .title,
+  .priorities__item-title,
+  .contact__write-me,
+  .footer__item-title{
+    color: $main-bg;
+  }
   .header{
     color: #313131;
   }
   .menu__item-link--active,
   .header__lang-link--active{
     color: #000;
+  }
+  .menu__item-link,
+  .header__lang-link{
+    &:hover{
+      color: #000;
+    }
   }
   .top{
     background-color: #cbcbcb;
@@ -20,18 +35,85 @@ html.light{
       color: #a6a6a6;
     }
     &__wrapper{
-      background-image: url(../images/l-4.png);
+      background-image: url(../images/top-light.png);
       background-position: 88% 100%;
       background-size: 800px;
-      /* background-size: contain; */
     }
   }
- /*  .title{
-    color: $btn;
-  } */
+  .about-me {
+    &__links-text span {
+      color: $main-bg;
+    }
+    &__img-box{
+      &::before {
+        border: 29px solid #bfbfbf;
+      }
+      &::after{
+        display: none;
+      }
+    }
+    &__img{
+    filter: grayscale(0) contrast(100%) brightness(100%);
+    }
+  }
+
+  .skills {
+    background-color: #bfbfbf;
+  }
+  .circle {
+    div,
+    .descr{
+      color: $main-bg;
+    }
+  }
+
+  .priorities,
+  .contact{
+    &::before{
+      opacity: .5;
+      background: url('../images/priorities-light.jpg') no-repeat center/cover;
+      @supports (background-image: url('../images/priorities-light.webp')) {
+      background: url('../images/priorities-light.webp') no-repeat center/cover;
+    };
+    }
+  }
+  .about-me,
+  .portfolio,
+  .footer {
+    background-color: #e2e2e2;
+  }
+
+  .mixitup-control-active {
+    color: #1B1B1B;
+  }
+
+  .portfolio__work-descr,
+  .contact-form__checkbox,
+  .contact-form__task{
+    color: $default;
+  }
+
+  .contact__blockquote {
+    box-shadow: 1px 1px 29px #414141;
+    background-color: #d6d6d6;
+    &::before{
+      border-top: 37px solid #d6d6d6;
+    }
+  }
+
+  .contact__img{
+    filter: grayscale(0) contrast(100%) brightness(100%);
+  }
+
   %btn{
     color: $main-bg;
     background-color: #a6a6a6;
+  }
+  /* .scroll-top--active {
+   
+  } */
+  .scroll-top{
+    background-color: rgba(172, 169, 169, 80%);
   }
 }
 
@@ -72,7 +154,6 @@ body.hidden{
   line-height: 100%;
   @extend %oswald-400;
   padding-left: 85px;
-  transition: all .3s linear;
   position: relative;
   &::before{
     content: '';

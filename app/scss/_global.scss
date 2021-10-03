@@ -1,5 +1,8 @@
 html, body{
   height: 100%;
+  ::-webkit-scrollbar { width: 8px; height: 8px; } //ширина и высота скролла
+  ::-webkit-scrollbar-track-piece { background-color: $default;}//цвет полосы
+  ::-webkit-scrollbar-thumb { height: 50px; background-color: $accent; border-radius: 0;}/* ползунок скроллбара */
 }
 
 
@@ -30,6 +33,9 @@ html.light{
     background-color: #cbcbcb;
     &__title{
       color: $main-bg;
+    }
+    &__name{
+      color: #686868;
     }
     &__subtitle{
       color: #a6a6a6;
@@ -74,8 +80,11 @@ html.light{
       background: url('../images/priorities-light.jpg') no-repeat center/cover;
       @supports (background-image: url('../images/priorities-light.webp')) {
       background: url('../images/priorities-light.webp') no-repeat center/cover;
-    };
+      };
     }
+  }
+  .contact::before{
+    opacity: .27;
   }
   .about-me,
   .portfolio,
@@ -210,10 +219,12 @@ body.hidden{
 }
 
 @media (max-width:576px){
-  html.light .top__wrapper{
-    background-size: 522px;
-    background-position: 0% 60%;
-  }
+ /*  html.light{
+    .top__wrapper{
+      background-size: 522px;
+      background-position: left bottom;
+    }
+  } */
   body{
     font-size: 18px;
     line-height: 28px;

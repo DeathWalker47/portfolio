@@ -245,6 +245,10 @@
 }
 
 @media (max-width:576px){
+  .preloader__text {
+    font-size: 20px;
+    line-height: 28px;
+  }
   html.light .top__wrapper {
     background-position: left bottom;
     background-size: 500px;

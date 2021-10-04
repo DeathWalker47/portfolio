@@ -24,6 +24,7 @@
     line-height: 36px;
     color: $title;
     animation: preloader-text 3.5s linear infinite;
+    text-align: center;
   }
 }
 @keyframes preloader-text {

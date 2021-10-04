@@ -1,3 +1,16 @@
+document.body.onload = function() {
+  
+  setTimeout(function() {
+
+    var preloader = document.getElementById('preloader');
+    if( !preloader.classList.contains('hidden') )
+    {
+      preloader.classList.add('hidden');
+    }
+  }, 600);
+}
+
+
 $(function(){
  
     $(".menu__item-link, .top__link, .footer__up").on("click", function (e) {
@@ -80,37 +93,6 @@ var offset = 200;
    
 });
 
-/* 
-  document.querySelector('.top__theme').addEventListener('click', () => {
-    if (localStorage.getItem('theme') === 'light') {
-      localStorage.removeItem('theme');
-    }
-    else {
-      localStorage.setItem('theme', 'light')
-    }
-    addDarkClassToHTML()
-  });
-  
-  function addDarkClassToHTML() {
-    try {
-      if (localStorage.getItem('theme') === 'light') {
-        document.querySelector('html').classList.add('light');
-        document.querySelector('.top__theme-btn--dark').classList.remove('top__theme-btn--active');
-        document.querySelector('.top__theme-btn--light').classList.add('top__theme-btn--active');
-      }
-      else {
-        document.querySelector('html').classList.remove('light');
-        document.querySelector('.top__theme-btn--light').classList.remove('top__theme-btn--active');
-        document.querySelector('.top__theme-btn--dark').classList.add('top__theme-btn--active');
-      }
-    } catch (err) { }
-  }
-  
-  addDarkClassToHTML();
-
- */
-
-
 $(document).ready(function ($) {
   function animateElements() {
       $('.progressbar').each(function () {
@@ -148,21 +130,3 @@ var mixer = mixitup('.portfolio__works', {
       easing: 'ease-in-out'
     }
    });
-
- /*   function setTheme(themeName) {
-    localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
-  }
-
-  function toggleTheme() {
-    if (localStorage.getItem('theme') === 'dark-theme') {
-      setTheme('light-theme');
-    } else {
-      setTheme('dark-theme');
-    }
-  }
-
-  document.querySelector('.top__theme-btn').addEventListener('click', (e) => {
-    toggleTheme();
-  }); */
-

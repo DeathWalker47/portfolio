@@ -251,7 +251,7 @@
   }
   html.light .top__wrapper {
     background-position: left bottom;
-    background-size: 500px;
+    background-size: 530px;
   }
   .top{
     padding: 60px 0 55px;
@@ -550,6 +550,9 @@
 }
 
 @media (max-width:340px){
+  html.light .top__wrapper {
+    background-size: 430px;
+  }
   .about-me,
   .skills,
   .priorities,

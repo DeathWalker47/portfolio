@@ -12,6 +12,12 @@ document.body.onload = function() {
 
 
 $(function(){
+
+
+  $('.portfolio__work').tilt({
+    maxTilt: 20,
+    perspective: 1000,
+    });
  
     $(".menu__item-link, .top__link, .footer__up").on("click", function (e) {
       e.preventDefault();
